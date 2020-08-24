@@ -77,7 +77,7 @@ matrix:
 
 script:
   - if [ "$DB" = "mariadb:build" ] ; then .travis/build/build.sh; fi
-  - if [ "$DB" = "mariadb:build" ] ; then docker build -t mariadb:build .travis/build/; fi
+  - if [ "$DB" = "mariadb:build" ] ; then docker build -t mariadb:build --label build .travis/build/; fi
   - .travis/script.sh
 
 after_success:
