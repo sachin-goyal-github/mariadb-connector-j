@@ -79,7 +79,7 @@ RUN dpkg -R --unpack /root/
 RUN apt-get install -f -y
 RUN ls -lrt /etc/mysql/
 RUN rm -rf /var/lib/apt/lists/* \
-    	&& sed -ri 's/^user\s/#&/' /etc/mysql/my.cnf /etc/mysql/conf.d/* \
+    	&& sed -ri 's/^user\s/#&/' /etc/mysql/mariadb.cnf /etc/mysql/conf.d/* \
     	&& rm -rf /var/lib/mysql && mkdir -p /var/lib/mysql /run/mysqld \
     	&& chown -R mysql:mysql /var/lib/mysql /run/mysqld \
     	&& chmod 777 /run/mysqld \
