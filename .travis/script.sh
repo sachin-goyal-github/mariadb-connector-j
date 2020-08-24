@@ -138,7 +138,7 @@ else
               mysql=( mysql --protocol=tcp -ubob -h127.0.0.1 --port=3305 )
               export COMPOSE_FILE=.travis/docker-compose.yml
 #              docker-compose -f ${COMPOSE_FILE} build
-              docker-compose -f ${COMPOSE_FILE} up --no-build -d
+              docker-compose -f ${COMPOSE_FILE} up -d
           fi
       fi
 
